@@ -1,0 +1,53 @@
+:root {
+  --darker: #000;
+  --dark: #393939;
+  --white-dark: #F9FAFA;
+  --white: #ffffff;
+  --orange-dark: #ED7D2B;
+  --orange: #F99746;
+  --blue: #B6D1F8;
+  --green-darker: #82B378;
+  --green-dark: #CDFDD1;
+  --green: #EFFAEB;
+
+  font-size: 60%;
+}
+
+* {
+  margin: 0 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+body {
+  background: var(--white-dark);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1.6rem Nunito;
+  color: var(--dark)
+}
+
+.container {
+  width: 90vw;
+  max-width: 700px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 62.5%;
+  }
+}
