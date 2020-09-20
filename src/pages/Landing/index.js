@@ -8,7 +8,7 @@ import './styles.css';
 
 export default function Header() {
   return (
-    <div id="page-landing" className="container">
+    <div id="page-landing" >
       <div id="page-landing-content">
         <header className="header">
           <div className="top-bar-container">
@@ -21,8 +21,7 @@ export default function Header() {
           </div>
         </header>
 
-        <div id="page-landing-container" >
-          <div className="landing-container">
+        <div id="landing-container" className="container">
             <h1>
               Encontre todas <strong>informações 
               nutricionais</strong> do seu alimento
@@ -32,7 +31,7 @@ export default function Header() {
             <div className="search-container">
               <div className="select-block">
                 <select value="" id="">
-                  <option value="" disabled hidden>Escolha a categoria do alimento</option>
+                  <option value="" disabled hidden>Escolha a categoria</option>
                   <option value="" >teste</option>
                 </select>
               </div>
@@ -45,7 +44,6 @@ export default function Header() {
             <div className="landing-image">
               <img src={landingImg} alt="hero-image" className="hero-image"/>
             </div>
-          </div>
         </div>
       </div>
    </div>
