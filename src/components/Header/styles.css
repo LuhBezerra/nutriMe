@@ -22,6 +22,10 @@
   font-size: 2.2rem;
 }
 
+.top-bar-container a:hover {
+  color: var(--orange-dark)
+}
+
 .top-bar-container img {
   margin-right: 6rem;
 }
