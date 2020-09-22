@@ -1,0 +1,30 @@
+#page-categories {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-categories-title {
+  width: 90%;
+  padding-left: 70px;
+  font: 700 3rem Nunito;
+}
+
+#categories-content {
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90vw;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1000px) {
+  .page-categories-title {
+    font-size: 4rem;
+  }
+}
