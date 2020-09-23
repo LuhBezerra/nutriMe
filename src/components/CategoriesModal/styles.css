@@ -74,34 +74,6 @@
   background: var(--grey);
 }
 
-.info-nutritinal-item-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 36px;
-  padding: 0 5px;
-  border-radius: 50px;
-  background: var(--grey-dark);
-}
-
-.info-nutritinal-item-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
-}
-
-.info-nutritinal-item-value {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  height: 75%;
-  width: 35%;
-  background: var(--white);
-}
-
 .close {
   background: rgb(0, 0, 0, 0.0);
   outline: none;

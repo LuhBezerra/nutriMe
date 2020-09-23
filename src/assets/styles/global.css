@@ -29,10 +29,7 @@ body {
   background: var(--green);
 }
 
-body,
-input,
-button,
-textarea {
+body{
   font: 400 1.6rem Nunito;
   color: var(--dark)
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import closeImg from '../../assets/images/icons/close.svg';
+import Item from '../CategoriesModalItem';
 
 import './styles.css'
 
@@ -26,42 +27,25 @@ const Modal = ({id="modal", onClose = () => {}, title}) => {
             </div>
 
             <div className="info-nutritional-container">
-              <div className="info-nutritinal-item-container">
-                <div className="info-nutritinal-item-title">
-                  Carboidratos
-                </div>
-                <div className="info-nutritinal-item-value">
-                  23.5 g
-                </div>
-              </div>
+              <Item
+                title="Carboidratos"
+                quantity="123.5"
+              />
 
-              <div className="info-nutritinal-item-container">
-                <div className="info-nutritinal-item-title">
-                  Carboidratos
-                </div>
-                <div className="info-nutritinal-item-value">
-                  23.5 g
-                </div>
-              </div>
+              <Item
+                title="Carboidratos"
+                quantity="123.5"
+              />
 
-              <div className="info-nutritinal-item-container">
-                <div className="info-nutritinal-item-title">
-                  Carboidratos
-                </div>
-                <div className="info-nutritinal-item-value">
-                  23.5 g
-                </div>
-              </div>
+              <Item
+                title="Carboidratos"
+                quantity="123.5"
+              />
 
-              <div className="info-nutritinal-item-container">
-                <div className="info-nutritinal-item-title">
-                  Carboidratos
-                </div>
-                <div className="info-nutritinal-item-value">
-                  23.5 g
-                </div>
-              </div>
-
+              <Item
+                title="Carboidratos"
+                quantity="123.5"
+              />
             </div> 
             
            </div>

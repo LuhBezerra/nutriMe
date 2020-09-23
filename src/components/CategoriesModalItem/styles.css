@@ -1,0 +1,51 @@
+.info-nutritinal-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 36px;
+  padding: 0 5px;
+  border-radius: 50px;
+  background: var(--grey-dark);
+}
+
+.info-nutritinal-item-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 400 1.8rem Karla;
+  width: 75%;
+}
+
+.info-nutritinal-item-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 75%;
+  width: 35%;
+  font: 700 1.5rem Karla;
+  background: var(--white);
+}
+
+@media(min-width: 401px) {
+  .info-nutritinal-item-title {
+    font: 400 2.2rem Karla;
+    width: 75%;
+  }
+  
+  .info-nutritinal-item-value {
+    font: 700 1.8rem Karla;
+  }
+}
+
+@media(min-width: 1100px) {
+  .info-nutritinal-item-title {
+    font: 400 2.5rem Karla;
+    width: 75%;
+  }
+  
+  .info-nutritinal-item-value {
+    font: 700 2rem Karla;
+  }
+}
