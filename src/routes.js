@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Categories from './pages/CategoriesList';
-//switch garante que uma rota seja executada a cada momento 
 
 import Landing from "./pages/Landing";
 

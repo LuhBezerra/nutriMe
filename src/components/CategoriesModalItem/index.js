@@ -9,7 +9,7 @@ const NutritionalItem = (props) => {
         {props.title}
       </div>
       <div className="info-nutritinal-item-value">
-        {props.quantity} g
+        {props.quantity} {props.unit}
       </div>
     </div>
   )

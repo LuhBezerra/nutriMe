@@ -36,7 +36,7 @@
 
 .item-container:hover {
   background-color: var(--orange-dark);
-  box-shadow: 0px 15px 20px rgba(237, 125, 43, 0.05);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
   color: #fff;
   transform: translateY(-3px);
 }
@@ -46,17 +46,18 @@
 }
 
 .item-title {
-  
+  height: 76%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .item-title h1 {
   padding: 2rem 2rem;
   text-align: center;
-  font: 700 3rem Karla;
+  font: 700 2.5rem Karla;
   color: var(--white);
-  height: 100%;
+  
 }
 
 .item-container footer {
@@ -66,7 +67,7 @@
   flex-direction: column;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
-  height: 72px;
+  height: 50px;
   background: var(--white);
   color: var(--dark);
 }
@@ -103,11 +104,11 @@
   }
 
   .item-title {
-    height: 160px;
+    height: 170px;
   }
 
 
-.item-container footer {
-  height: 70px;
+  .item-container footer {
+    height: 60px;
 }
 }

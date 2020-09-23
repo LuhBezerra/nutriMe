@@ -1,16 +1,32 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import Header from '../../components/Header/';
 import Item from '../../components/Item';
 import CategoriesModal from '../../components/CategoriesModal';
 
+import api from '../../services/api';
+
 import './styles.css';
 
-export default function Categories() {
-  const categoryItens = [0,1,2,3,4,5,6,7,8];
-
+export default function Categories(props) {
   const [isModalVisible, setModalVisible] = useState(false);
+  
+  const [categoryItens,setCategoryItens] = useState([]);
+  
+  let info;
 
+  if (props.location.state != null){
+    info = props.location.state.category;
+  }else {
+    //bloqueia a entrada inadequada na rota category
+  }
+
+  useEffect(() => {
+    api.get(`/category/${info[0].id}/food`).then(response => {
+      setCategoryItens(response.data);
+    })
+  }, [info]);
+  
   return (
     <div id="page-categories" >
       <Header
@@ -19,32 +35,23 @@ export default function Categories() {
       />
 
       <div className="page-categories-title">
-        Categoria
+        {info[0].category}
       </div>
-
 
       <div id="categories-content">
         {categoryItens.map(item => {
-          console.log(item)
           return (
             <Item
-            key="" 
-            title="Arroz, integral, cozido"
-            quantity="100 g"
+            key={item.id}
+            data={item} 
             onOpen={()=>setModalVisible(true)}
             />
-            
-            
             )
           })}
-
       </div>
 
       {isModalVisible ? (
-        <CategoriesModal onClose={() => {setModalVisible(false)}}>
-          sdsdk 
-        </CategoriesModal>
-        ) : null
+        <CategoriesModal onClose={() => {setModalVisible(false)}}/>) : null
       }
     </div>
   )
