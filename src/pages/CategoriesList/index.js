@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import $ from 'jquery'
 
 import Header from '../../components/Header/';
 import Item from '../../components/Item';
@@ -13,13 +14,10 @@ export default function Categories(props) {
   
   const [categoryItens,setCategoryItens] = useState([]);
   
-  let info;
-
-  if (props.location.state != null){
-    info = props.location.state.category;
-  }else {
-    //bloqueia a entrada inadequada na rota category
-  }
+  isModalVisible ? 
+  $("#page-categories").css({"position":"fixed"}) : $("#page-categories").css({"position":"relative"})
+  
+  let info = props.location.state.category;
 
   useEffect(() => {
     api.get(`/category/${info[0].id}/food`).then(response => {

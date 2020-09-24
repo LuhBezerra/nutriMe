@@ -29,47 +29,45 @@ const Modal = ({id="modal", onClose = () => {}}) => {
 
   return (
     <div id={id} className="modal" onClick={handleOutsideClick}>
+      <div className='close-button' onClick={onClose}>
+        <img src={closeImg} alt="botão-para-fechar"/>
+      </div>
       <div className="container">
-        <button className="close" onClick={onClose}>
-          <img src={closeImg} alt="botão-para-fechar"/>
-        </button>
-        <div className="content">
-          <h1>{dataClickedItem[0].description}</h1>
+        <h1>{dataClickedItem[0].description}</h1>
 
-          <div className="info-container">
-            <div className="info-container-energy">
-              <h2>Valor <br/>energético</h2>
+        <div className="info-container">
+          <div className="info-container-energy">
+            <h2>Valor <br/>energético</h2>
 
-              <p>{isNA(energy)}</p>
-              <p>kcal</p>
-            </div>
-
-            <div className="info-nutritional-container">
-              <Item
-                title="Carbo"
-                quantity={isNA(carbohydrate)}
-                unit={dataClickedItem[0].attributes.carbohydrate.unit}
-              />
-
-              <Item
-                title="Proteína"
-                quantity={isNA(protein)}
-                unit={dataClickedItem[0].attributes.protein.unit}
-              />
-
-              <Item
-                title="Fibra"
-                quantity={isNA(fiber)}
-                unit={dataClickedItem[0].attributes.fiber.unit}
-              />
-
-              <Item
-                title="Sódio"
-                quantity={isNA(sodium)}
-                unit={dataClickedItem[0].attributes.sodium.unit}
-              />
-            </div> 
+            <p>{isNA(energy)}</p>
+            <p>kcal</p>
           </div>
+
+          <div className="info-nutritional-container">
+            <Item
+              title="Carbo"
+              quantity={isNA(carbohydrate)}
+              unit={dataClickedItem[0].attributes.carbohydrate.unit}
+            />
+
+            <Item
+              title="Proteína"
+              quantity={isNA(protein)}
+              unit={dataClickedItem[0].attributes.protein.unit}
+            />
+
+            <Item
+              title="Fibra"
+              quantity={isNA(fiber)}
+              unit={dataClickedItem[0].attributes.fiber.unit}
+            />
+
+            <Item
+              title="Sódio"
+              quantity={isNA(sodium)}
+              unit={dataClickedItem[0].attributes.sodium.unit}
+            />
+          </div> 
         </div>
       </div>
     </div>
