@@ -29,6 +29,10 @@
   width: 80%;
 }
 
+#about-container strong {
+  color: var(--orange-dark);
+}
+
 .know-more {
   display: flex;
   flex-direction: column;

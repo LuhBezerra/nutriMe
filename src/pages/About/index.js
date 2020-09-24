@@ -16,8 +16,8 @@ export default function LandingPage() {
 
       <div id="about-container">
         <h1>
-          O site Nutrime foi criado a partir do banco
-          de dados da api TACO (Brazilian Table of Food Composition),
+          O site Nutri<strong>me</strong> foi criado a partir do banco
+          de dados da API TACO (Brazilian Table of Food Composition),
           a mesma tem como objetivo 
           fornecer dados de um grande número de nutrientes 
           em alimentos nacionais e regionais obtidos 
