@@ -31,16 +31,18 @@ export default function LandingPage() {
     <div id="page-landing" >
       <Header
         option1="Home"
+        option1Link='/'
         option2="Sobre"
+        option2Link="/about"
       />
 
       <div id="landing-container" className="container">
-        <div className="search-container">
-          <h1>
+        <div id="search-container">
+          <h2>
             Encontre todas <strong>informações<br/> 
             nutricionais</strong> do seu alimento<br/>
             preferido
-          </h1>
+          </h2>
 
           <div className="select-block">
             <select id="categories" defaultValue='category' onChange={handleSelectChange}>

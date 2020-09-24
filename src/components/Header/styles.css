@@ -1,10 +1,12 @@
 .header {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   height: 12rem;
   background: var(--white-dark);
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 500px;
+  z-index: 1;
 }
 
 .top-bar-container {
@@ -19,7 +21,7 @@
 .top-bar-container a {
   color: var(--darker);
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .top-bar-container a:hover {
@@ -27,9 +29,20 @@
 }
 
 .top-bar-container img {
-  margin-right: 6rem;
+  width: 15rem;
+  margin-right: 2rem;
 }
 
 .top-bar-options a:first-child{
   margin-right: 30px;
+}
+
+@media (min-width: 1100px) {
+  .top-bar-container img {
+    width: 20rem;
+  }
+
+  .top-bar-container a {
+    font-size: 2.2rem;
+  }
 }

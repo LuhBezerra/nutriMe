@@ -20,7 +20,12 @@
   background: var(--green-dark);
 }
 
-.search-container {
+.container {
+  width: 90vw;
+  max-width: 700px;
+}
+
+#search-container {
   display: flex;
   width: 100%;
   height: 100%;
@@ -30,15 +35,15 @@
   margin-bottom: 4rem;
 }
 
-.search-container h1 {
+#search-container h2 {
   padding: 3rem 0;
-  height: 70%;
+  height: 100%;
   text-align: center;
   font-size: 3.2rem;
   font-weight: 800;
 }
 
-.search-container strong {
+#search-container strong {
   color: var(--orange-dark);
 }
 
@@ -50,6 +55,7 @@
 }
 
 .select-block select {
+  padding-top: 50rem;
   margin: 0;
   width: 100%;
   height: 5.6rem;
@@ -130,12 +136,12 @@
     align-items: center;
   }
 
-  .search-container {
+  #search-container {
     width: 50%;
     height: 40%;
   }
 
-  .search-container h1 {
+  #search-container h2 {
     font-size: 4rem;
 
   }
