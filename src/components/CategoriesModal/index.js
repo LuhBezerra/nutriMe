@@ -11,13 +11,7 @@ const Modal = ({id="modal", onClose = () => {}}) => {
     if(e.target.id === id) onClose()
   }
 
-  const dataClickedItem = useSelector(state => state.data );
-
-  const energy = dataClickedItem[0].attributes.energy.kcal;
-  const carbohydrate = dataClickedItem[0].attributes.carbohydrate.qty
-  const protein = dataClickedItem[0].attributes.protein.qty
-  const fiber = dataClickedItem[0].attributes.fiber.qty
-  const sodium = dataClickedItem[0].attributes.sodium.qty
+  const dataClickedItem = useSelector(state => state.data[0] );
 
   function isNA(attribute){                     
     if (typeof(attribute) === 'number') {
@@ -27,45 +21,53 @@ const Modal = ({id="modal", onClose = () => {}}) => {
     }
   } 
 
+  function attributeExists(type, value) {
+    if (typeof dataClickedItem.attributes[type] !== 'undefined' ){
+      return isNA(dataClickedItem.attributes[type][value])
+    } else {
+      return 'NA'
+    }
+  }
+
   return (
     <div id={id} className="modal" onClick={handleOutsideClick}>
       <div className='close-button' onClick={onClose}>
         <img src={closeImg} alt="botão-para-fechar"/>
       </div>
       <div className="container">
-        <h1>{dataClickedItem[0].description}</h1>
+        <h1>{dataClickedItem.description}</h1>
 
         <div className="info-container">
           <div className="info-container-energy">
             <h2>Valor <br/>energético</h2>
 
-            <p>{isNA(energy)}</p>
+            <p>{attributeExists('energy','kcal')}</p>
             <p>kcal</p>
           </div>
 
           <div className="info-nutritional-container">
             <Item
               title="Carbo"
-              quantity={isNA(carbohydrate)}
-              unit={dataClickedItem[0].attributes.carbohydrate.unit}
+              quantity={attributeExists('carbohydrate','qty')}
+              unit={attributeExists('carbohydrate','unit')}
             />
 
             <Item
               title="Proteína"
-              quantity={isNA(protein)}
-              unit={dataClickedItem[0].attributes.protein.unit}
+              quantity={attributeExists('protein','qty')}
+              unit={attributeExists('protein','unit')}
             />
 
             <Item
               title="Fibra"
-              quantity={isNA(fiber)}
-              unit={dataClickedItem[0].attributes.fiber.unit}
+              quantity={attributeExists('fiber','qty')}
+              unit={attributeExists('fiber','unit')}
             />
 
             <Item
               title="Sódio"
-              quantity={isNA(sodium)}
-              unit={dataClickedItem[0].attributes.sodium.unit}
+              quantity={attributeExists('sodium','qty')}
+              unit={attributeExists('sodium','unit')}
             />
           </div> 
         </div>
