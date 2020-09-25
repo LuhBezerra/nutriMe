@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import $ from 'jquery'
+import $ from 'jquery';
 
 import Header from '../../components/Header/';
 import Item from '../../components/Item';
@@ -30,6 +30,8 @@ export default function Categories(props) {
       <Header
         option1="Voltar"
         option1Link="/"
+        option2=''
+        option2Link=''
       />
 
       <div className="page-categories-title">

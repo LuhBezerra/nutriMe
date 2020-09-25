@@ -45,8 +45,8 @@ export default function LandingPage() {
           </h2>
 
           <div className="select-block">
-            <select id="categories" defaultValue='category' onChange={handleSelectChange}>
-              <option value='0' selected disabled>Escolha uma categoria</option>
+            <select defaultValue='DEFAULT' onChange={handleSelectChange}>
+              <option value='DEFAULT' disabled>Escolha uma categoria</option>
               {options.map( option => (
               <option key={option.category} value={option.id} >{option.category}</option>
               ))}

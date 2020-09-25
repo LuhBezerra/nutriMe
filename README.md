@@ -26,6 +26,9 @@ Para saber mais sobre essa API consulte [API TACO](https://github.com/raulfdm/ta
 -  Redux
 -  Jquery
 
+
+**SO**: Linux Ubuntu
+
 ## Como Executar
 
 - ### **Pré-requisitos**
